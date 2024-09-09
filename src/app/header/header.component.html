@@ -1,9 +1,38 @@
+<!--<header>-->
+<!--  <div class="container">-->
+<!--    <a href="#" routerLink="/" class="logo">Food Order!</a>-->
+<!--    <nav>-->
+<!--      <ul>-->
+<!--        <li><a href="#" routerLink="/cart-page">Cart</a></li>-->
+<!--      </ul>-->
+<!--    </nav>-->
+<!--  </div>-->
+<!--</header>-->
 <header>
   <div class="container">
     <a href="#" routerLink="/" class="logo">Food Order!</a>
     <nav>
       <ul>
-        <li><a href="#" routerLink="/cart-page">Cart</a></li>
+        <li class="menu-container"> <!-- Moved class="menu-container" here -->
+          <a routerLink="/register">Register
+          </a>
+        </li>
+        <li class="menu-container"> <!-- Moved class="menu-container" here -->
+          <a routerLink="/login">Login</a>
+        </li>
+        <li class="menu-container"> <!-- Added class="menu-container" here -->
+          <a routerLink="/dashboard">John</a>
+          <div class="menu">
+            <a routerLink="/profile">Profile</a>
+            <a routerLink="/orders">Orders</a>
+            <a routerLink="/logout">Logout</a> <!-- Corrected logout link -->
+          </div>
+        </li>
+        <li>
+          <a routerLink="/cart-page">
+            Cart <span>3</span>
+          </a>
+        </li>
       </ul>
     </nav>
   </div>

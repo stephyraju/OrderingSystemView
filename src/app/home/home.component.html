@@ -1,45 +1,41 @@
+<app-search></app-search>
+<app-not-found
+  [visible]="!foods || !foods.length"
+  resetLinkText="Reset Search">
+</app-not-found>
 <ul>
   <li *ngFor="let food of foods">
-    <a>
-      <img src="{{food.imageUrl}}" alt="" />
+    <a routerLink="/food/{{food.id}}">
+      <img [src]="food.imageUrl" [alt]="food.name" />
       <div class="content">
         <div class="name">
           {{food.name}}
         </div>
         <span class="favorite {{food.favorite?'':'not'}}">
-                    ❤
-                </span>
+          ❤
+        </span>
 <!--        <div class="stars">-->
-<!--          <star-rating-->
-<!--            [value]="food.stars"-->
-<!--            [totalstars]="5"-->
-<!--            checkedcolor="red"-->
-<!--            uncheckedcolor="black"-->
-<!--            size="20px"-->
-<!--            [readonly]="true">-->
-<!--          </star-rating>-->
+<!--          <star-rating [stars]="food.stars" />-->
 <!--        </div>-->
         <div class="product-item-footer">
           <div class="origins">
-                        <span *ngFor="let origin of food.origins">
-                             {{origin}}
-                        </span>
+            <span *ngFor="let origin of food.origins">
+              {{origin}}
+            </span>
           </div>
+
           <div class="cook-time">
             <span>🕒</span>
             {{food.cookTime}}
           </div>
         </div>
+
         <div class="price">
-                    <span>
-                        {{food.price|currency}}
-                    </span>
+          <span>
+            {{food.price | currency}}
+          </span>
         </div>
       </div>
     </a>
-
   </li>
 </ul>
-<!--<img src="/assets/images/foods/food-2.jpg" alt="Description of the image">-->
-
-

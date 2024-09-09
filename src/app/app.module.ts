@@ -7,6 +7,15 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule} from "./app-routing.module";
 import { SearchComponent } from './search/search.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { FoodPageComponent } from "./food-page/food-page.component";
+import { CartPageComponent } from "./cart-page/cart-page.component";
+import { TitleComponent } from "./title/title.component";
+import {NotFoundComponent} from "./not-found/not-found.component";
+import {LoginComponent} from "./login/login.component";
+import {RegisterComponent} from "./register/register.component";
+import {HttpClientModule} from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -14,10 +23,16 @@ import { SearchComponent } from './search/search.component';
     ProductListComponent,
     HeaderComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    FoodPageComponent,
+    CartPageComponent,
+    TitleComponent,
+    NotFoundComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule,
+    BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
